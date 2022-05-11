@@ -39,11 +39,11 @@
             </a-mixin>
         </a-assets>
   
-        <a-camera position="0 0 0">
+        <a-camera position="0 0 0" look-controls-enabled="false">
             <a-entity 
                 cursor="fuse: true; fuseTimeout: 2000;" 
                 raycaster="objects: .clickable" 
-                position="0 0 1" 
+                position="0 0 0" 
                 scale="1 1 1" 
                 geometry="primitive: ring;" 
                 material="color: white; shader: flat" 
@@ -52,6 +52,8 @@
                 animation__scalemouseleave="property: scale; startEvents: mouseleave; easing: easeInQuad; dur: 2000; to: 0.01 0.01 0.01;"
                 animation__colormouseleave="property: components.material.material.color; isRawProperty: true; type: color; startEvents: mouseleave; easing: easeInQuad; dur: 2000; to: white;"
             >
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="0.01 0.01 0.01" to="0.02 0.02 0.02" dur="3000"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="material.color" from="white" to="orange" dur="3000"></a-animation>
             </a-entity>
         </a-camera>
         
