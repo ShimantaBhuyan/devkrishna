@@ -1,2 +1,2 @@
-# [devkrishna.in](www.devkrishna.in)
+# [devkrishna.in](https://devkrishna.in)
 ### Repo for personal website 
